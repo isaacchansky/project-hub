@@ -24,6 +24,8 @@ body {
   color: #333333;
   font: 120%/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
   padding: 1em;
+  max-width: 900px;
+  margin: 0 auto;
   -webkit-text-size-adjust: 100%; }
   @media all and (min-width: 40em) {
     body {
@@ -55,7 +57,6 @@ h1 {
   margin-bottom: 0.8em; }
 
 h2 {
-  text-transform: lowercase;
   font-size: 3em;
   line-height: 1.1;
   margin: 0 0 0.4em; }
@@ -63,10 +64,30 @@ h2 {
 h3 {
   font-size: 1.8em;
   line-height: 1.1;
-  margin: 0 0 0.2em;
-  text-transform: lowercase; }
+  margin: 0 0 0.2em; }
 
 /************End Global**************/
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+@media all and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+  .ref-links {
+    order: -1;
+  }
+}
+
+.ref-links {
+  margin-bottom: 40px;
+}
+.ref-links h2 {
+  font-size: 1.2rem;
+}
+
 /************Timeline**************/
 /* Timeline Container */
 .timeline {
